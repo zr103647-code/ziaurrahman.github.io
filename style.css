@@ -906,3 +906,73 @@ a:focus-visible {
     transition-duration: 0.01ms !important;
   }
 }
+/* ===== FIX: LOGO AND IMAGE SIZING ===== */
+
+.navbar .nav-content {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  flex-direction: row !important;
+  min-height: 82px;
+}
+
+.navbar .logo {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  flex-shrink: 0 !important;
+  width: auto !important;
+}
+
+.navbar .logo img {
+  display: block !important;
+  width: 48px !important;
+  height: 48px !important;
+  max-width: 48px !important;
+  object-fit: contain !important;
+  flex-shrink: 0 !important;
+  border-radius: 10px;
+  background: white;
+  padding: 3px;
+}
+
+.hero-image {
+  width: 100% !important;
+  max-width: 400px !important;
+  margin: auto;
+}
+
+.profile-frame {
+  width: 100% !important;
+  overflow: hidden !important;
+}
+
+.profile-photo {
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+  aspect-ratio: 4 / 5;
+  object-fit: cover !important;
+}
+
+.footer-logo img {
+  width: 35px !important;
+  height: 35px !important;
+  max-width: 35px !important;
+  object-fit: contain !important;
+}
+
+@media (max-width: 900px) {
+  .navbar .nav-content {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar .logo img {
+    width: 40px !important;
+    height: 40px !important;
+  }
+}
